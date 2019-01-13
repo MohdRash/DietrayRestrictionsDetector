@@ -3,6 +3,23 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome to Dietary Restrictions Detector</h1>
+
+    <p>
+        <!-- Below are a series of inputs which allow file selection and interaction with the cropper api -->
+        <input type="file" id="fileInput" accept="image/*" />
+        @*<input type="button" id="btnCrop" value="Crop" />
+            <input type="button" id="btnRestore" value="Restore" />*@
+        <input type="button" id="btnUpload" onclick="Process()" value="Process" />
+    </p>
+
+    <canvas id="canvas">
+        Your browser does not support the HTML5 canvas element.
+    </canvas>
+    <div id="result"></div>
+
+    <ul id="findings"></ul>
 </div>
+
+
+
